@@ -1,0 +1,9 @@
+go to terminal and got to directory containing this file.
+
+run: python3 -m http.server
+
+go to internet
+
+go to localhost:8000 (whatever number came out after running python command)
+
+then run the webpage.html in a new tab

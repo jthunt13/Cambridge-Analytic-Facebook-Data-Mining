@@ -1,0 +1,24 @@
+hdfs dfs -rm -r input
+hdfs dfs -rm -r output
+
+hdfs dfs -put /media/sf_Lab2/data/1day/TwitterData/facebook input
+
+time $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.6.4.jar \
+-mapper "python3 /media/sf_Lab2/src/mapReduce/coMapper.py" \
+-reducer "python3 /media/sf_Lab2/src/mapReduce/coReducer.py" \
+-input "input/" \
+-output "output"
+
+time $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.6.4.jar \
+-mapper "python3 /media/sf_Lab2/src/mapReduce/mapper.py" \
+-reducer "python3 /media/sf_Lab2/src/mapReduce/reducer.py" \
+-input "input/" \
+-output "output"
+
+hdfs dfs -get output/part-00000 /media/sf_Lab2/
+
+time $HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.6.4.jar \
+-mapper "python3 /media/sf_Lab2/src/mapReduce/coMapper.py" \
+-reducer "python3 /media/sf_Lab2/src/mapReduce/coReducer.py" \
+-input "input/" \
+-output "output"

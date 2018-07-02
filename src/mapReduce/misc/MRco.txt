@@ -1,0 +1,6 @@
+hdfs dfs -rm -r output
+$HADOOP_HOME/bin/hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.6.4.jar \
+-mapper "python3 /media/sf_Lab2/src/mapReduce/coOccur/coMapper.py" \
+-reducer "python3 /media/sf_Lab2/src/mapReduce/coOccur/coReducer.py" \
+-input "input/" \
+-output "output"

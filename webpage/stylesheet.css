@@ -1,0 +1,111 @@
+/* header formats */
+h2 {text-align: center}
+h3 {text-align: center}
+h4 {text-align: center}
+h5 {text-align: center}
+
+div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Style for dropdowns*/
+.dropbtn {
+    background-color: #3333cc;
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dropbtn:active {
+    background-color: #1E1E7A;
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.label {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+}
+
+.dropDown-option {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+/* Style for buttons*/
+.button {
+    background-color: #3333cc;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:active {
+    background-color: #1E1E7A;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+/* styles for D3.js Classes*/
+.bar { fill: steelblue;}
+.bar:hover { fill: brown;}
+
+.plotTitle {
+    font: sans-serif;
+    font-size : 20px;
+}
+
+.plotLabel {
+    font-size : 14px;
+    font: sans-serif;
+}
+
+.axis line, .axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 80px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 6px;
+  pointer-events: none;
+
+}
+
+.axisLabel {
+    font: 12px sans-serif;
+    text-anchor: middle;
+}
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}

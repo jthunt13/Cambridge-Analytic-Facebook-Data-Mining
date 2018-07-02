@@ -1,0 +1,78 @@
+<html lang = "en">
+  <head>
+    <title> CSE587 - Lab 2 visuals </title>
+    <meta charset = "UTF-8">
+    <!-- file path to javascript functions <script src = "./d3/d3.min.js"></script>-->
+    <!--
+    <script src = "./d3/d3.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="./d3/d3.layout.cloud.js"></script>
+    <script src = "./myJavaScript.js"></script>
+     <!-- link to my stylesheet -->
+    <link rel = "stylesheet" type="text/css" href="stylesheet.css"></link>
+  </head>
+
+  <body>
+       <!--Things to display on webpage  -->
+      <h2> CSE 587 - Lab 2 Visuals </h2>
+      <h3> Topic: Cambridge Analyica </h3>
+      <h4> Authors : Joseph Hadley and Jonathon Hunt </h4>
+
+      <!-- drop down buttons -->
+      <div align = "center">
+          <label class = "label"> Search Term:
+              <select id = "searchTerm" class = "dropbtn">
+                  <option value="0" class = "dropDown-option">Cambridge Analytic</option>
+                  <option value="1" class = "dropDown-option">facebook</option>
+              </select>
+          </label>
+
+          <label class = "label"> Time Frame:
+              <select id = "timePeriod" class = "dropbtn">
+                  <option value="0" class = "dropDown-option">1 Week</option>
+                  <option value="1" class = "dropDown-option">1 Day</option>
+              </select>
+          </label>
+
+          <label class = "label"> Top Word Amount:
+              <select id = "wordAmount" class = "dropbtn">
+                  <option value="0" class = "dropDown-option"> 10 </option>
+                  <option value="1" class = "dropDown-option"> 25 </option>
+                  <option value="2" class = "dropDown-option"> 50 </option>
+              </select>
+          </label>
+      </div>
+
+      <div align = "center">
+          <button onclick = "updateGraphs()" class = "button"> Update Figures </button>
+      </div>
+
+      <!-- place empty SVG elements for figures -->
+
+      <div id = "a1" align = "center">
+          <h3> Word Clouds </h3>
+          <h5 align = "center" id = "wordCountSearchTerm2"> Search Word : ??? </h5>
+          <div id = "area2"></div>
+      </div>
+
+      <div id = "a2" align = "center">
+          <h3> Word Count Totals </h3>
+          <h5 align = "center" id = "wordCountSearchTerm"> Search Word : ??? </h5>
+          <div id = "area1"></div>
+      </div>
+
+      <div id = "a1" align = "center">
+          <h3> Co-occurance Word Clouds </h3>
+          <h5 align = "center" id = "wordCountSearchTerm3"> Search Word : ??? </h5>
+          <div id = "area3"></div>
+      </div>
+
+            <!--call d3.js code -->
+      <script>
+        updateGraphs()
+        // put d3.js code here
+      </script>
+  </body>
+</html>
