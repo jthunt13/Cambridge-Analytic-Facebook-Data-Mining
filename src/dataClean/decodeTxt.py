@@ -20,12 +20,12 @@ def reEncodeDirectory(f):
         f1.close()
         f2.close()
 # reencode facebook
-os.chdir("/home/jkhadley/Documents/Programs/CSE587/Lab2/data/TwitterData/facebook/")
+os.chdir()
 f = os.listdir()
 reEncodeDirectory(f)
 
 # reencode cambridgeAnalytic
-os.chdir("/home/jkhadley/Documents/Programs/CSE587/Lab2/data/TwitterData/cambridgeAnalytic/")
+os.chdir()
 f = os.listdir()
 f
 reEncodeDirectory(f)
