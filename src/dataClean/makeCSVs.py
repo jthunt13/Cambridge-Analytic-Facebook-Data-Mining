@@ -1,7 +1,5 @@
 import pandas as pd
 import os
-os.getcwd()
-os.chdir("/home/jkhadley/Documents/Programs/CSE587/Lab2/src/dataClean/")
 
 savePath = "../../webpage/data/"
 
